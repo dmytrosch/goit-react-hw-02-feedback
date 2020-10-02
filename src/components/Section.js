@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 export default function Section(props) {
     const { title, children } = props;
@@ -8,4 +9,9 @@ export default function Section(props) {
             {children}
         </div>
     );
+}
+
+Section.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.object,
 }
